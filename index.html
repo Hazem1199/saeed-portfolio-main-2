@@ -162,15 +162,15 @@
               <div>
                 <div class="teach-content" data-aos="fade-left" data-aos-delay="100">
                   <ul class="teach-list">
-                    <li class="teach-item"><i class="bi bi-check-circle"></i> اعمل media Buyer
+                    <li class="teach-item"><i class="bi bi-check-circle"></i> عملت كـ media Buyer
                       manager فى Marketing agency.</li>
-                    <li class="teach-item"><i class="bi bi-check-circle"></i>اشتغل مع اكتر من 100 مشروع freelance .</li>
-                    <li class="teach-item"><i class="bi bi-check-circle"></i>اعمل فى شركة Brooklyn Business school
+                    <li class="teach-item"><i class="bi bi-check-circle"></i>عملت مع اكتر من 100 مشروع freelance .</li>
+                    <li class="teach-item"><i class="bi bi-check-circle"></i>عملت فى شركة Brooklyn Business school
                       التابعه لBrooklyn Institute
                       بأمريكا. </li>
-                    <li class="teach-item"><i class="bi bi-check-circle"></i>اعمل فى شركة British foundation التابعه ل
+                    <li class="teach-item"><i class="bi bi-check-circle"></i>عملت فى شركة British foundation التابعه ل
                       ICF بأمريكا.</li>
-                    <li class="teach-item"><i class="bi bi-check-circle"></i> اعمل فى marketing agency بعدها انتقل ل
+                    <li class="teach-item"><i class="bi bi-check-circle"></i> عملت فى marketing agency بعدها انتقل ل
                       marketing agency <br>
                       وهى MR.Perfection ترقى فى المناصب الى ان وصل ل media Buyer manager.</li>
                     <li class="teach-item"><i class="bi bi-check-circle"></i> شريك فى مؤسسة الحريف وهى مؤسسة تقدم منتجات
@@ -1162,6 +1162,11 @@
                 <div class="form-group mt-3">
                   <input name="Phone" type="phone" placeholder="Phone" class="form-control" required>
                 </div>
+                <div class="form-group mb-3">
+                  <!-- <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label> -->
+                  <textarea name="Consultations" class="form-control" placeholder="For meeting / Consultations"
+                    id="Textarea" rows="3"></textarea>
+                </div>
                 <div class="my-3">
                   <div class="error-message"></div>
                   <div dir="ltr" class="sent-message text-center alert alert-success d-none" id="success-msg">We will
@@ -1188,8 +1193,11 @@
                     },
                     success: function (result) {
                       jQuery('#frmSubmit')[0].reset();
-                      // jQuery('#success-msg').removeClass('d-none');
-                      window.location.href = "success.html";
+                      if (jQuery('#Textarea').val() !== '') {
+                        window.location.href = "ConsultationDone.html";
+                      } else {
+                        window.location.href = "success.html";
+                      }
                     },
                     error: function () {
                       jQuery('#msg').html('An error occurred. Please try again.');
@@ -1198,7 +1206,7 @@
                       jQuery('#spinner-container').empty();
                     }
                   });
-                })
+                });
               </script>
 
 
