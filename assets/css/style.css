@@ -329,14 +329,17 @@ h6 {
   font-size: 16px;
 }
 @media (max-width: 768px) {
+  .countdown-number {
+    padding: 0px 0px;
+  }
   .countdown-time {
     font-size: medium;
   }
   .countdown-text {
-    font-size: small;
+    font-size: 0.9rem;
   }
   .offer p {
-    font-size: medium;
+    font-size: 0.9rem;
     padding: 0 !important;
     margin: 0 !important;
   }
